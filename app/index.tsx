@@ -1,34 +1,20 @@
-import { View, Text, TouchableOpacity, StatusBar } from "react-native";
-import React from "react";
-import { Stack } from "expo-router";
-
-import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import Main from "@/components/Main";
 import ScreenWrapper from "@/components/ScreenWrapper";
-import Card from "@/components/Card";
-import Title from "@/components/Title";
-import MainCard from "@/components/cards/MainCard";
+import React from "react";
+import { ScrollView } from "react-native";
 
-export default function index() {
+export default function _screen() {
   return (
-    <ScreenWrapper title="Your Party">
-      <MainCard
-        title="Vice Awakens"
-        participating={3}
-        imgUrl="https://cdn-icons-png.flaticon.com/512/2603/2603009.png"
-        name="Vice, The Shadow Wyrm"
-        hp={1224}
-        damageDone={21}
-      />
+    <ScreenWrapper>
+      <Header />
 
-      <Title>MEMBERS</Title>
+      <ScrollView>
+        <Main />
+      </ScrollView>
 
-      <Card>
-        <Text>index</Text>
-      </Card>
-
-      <Card>
-        <Text>index</Text>
-      </Card>
+      <Footer />
     </ScreenWrapper>
   );
 }
