@@ -1,20 +1,17 @@
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import Main from "@/components/Main";
-import ScreenWrapper from "@/components/ScreenWrapper";
+import Caroussel from "@/components/caroussel";
+import ScreenWrapper from "@/components/screen-wrapper";
+import { metallicaAlbums } from "@/mocks/albums";
 import React from "react";
-import { ScrollView } from "react-native";
 
-export default function _screen() {
+export default function index() {
   return (
     <ScreenWrapper>
-      <Header />
-
-      <ScrollView>
-        <Main />
-      </ScrollView>
-
-      <Footer />
+      <Caroussel title="Metallica" albums={metallicaAlbums} />
+      <Caroussel title="Metallica" albums={metallicaAlbums} />
+      <Caroussel title="Metallica" albums={metallicaAlbums} />
+      <Caroussel title="Metallica" albums={metallicaAlbums} />
+      <Caroussel title="Metallica" albums={metallicaAlbums} />
+      <Caroussel title="Metallica" albums={metallicaAlbums} />
     </ScreenWrapper>
   );
 }
